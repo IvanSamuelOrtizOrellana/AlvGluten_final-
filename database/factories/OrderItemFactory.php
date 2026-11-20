@@ -5,13 +5,14 @@ namespace Database\Factories;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
-use Illuminate\Database\Eloquent\Factories\Factory;
+
 
 /**
  * @extends Factory<OrderItem>
  */
 class OrderItemFactory extends Factory
 {
+  
     public function definition(): array
     {
         $product = Product::inRandomOrder()->first() ?? Product::factory()->create();
